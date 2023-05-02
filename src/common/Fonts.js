@@ -1,0 +1,16 @@
+export const fontFamily = {
+    RubikLight: 'Rubik-Light',
+    RubikMedium: 'Rubik-Medium',
+    RubikRegular: 'Rubik-Regular',
+    RubikSemiBold: 'Rubik-SemiBold',
+    RubikBold: 'Rubik-Bold',
+    RubikExtraBold: 'Rubik-ExtraBold',
+    RubikBlack: 'Rubik-Black',
+    RubikItalic: 'Rubik-Italic',
+    RubikBlackItalic: 'Rubik-BlackItalic',
+    RubikBoldItalic: 'Rubik-BoldItalic',
+    RubikExtraBoldItalic: 'Rubik-ExtraBoldItalic',
+    RubikLightItalic: 'Rubik-LightItalic',
+    RubikMediumItalic: 'Rubik-MediumItalic',
+    RubikSemiBoldItalic: 'Rubik-SemiBoldItalic',
+  };
