@@ -24,10 +24,15 @@ import CancelOrdersDetails from '../blocks/CancelOrdersDetails';
 import OrderSummary from '../blocks/OrderSummary';
 import Schedule from '../blocks/Schedule';
 import OrderConfirm from '../blocks/OrderConfirm';
+import EditProfile from '../blocks/EditProfile';
+import ChangePassword from '../blocks/ChangePassword';
+import ChangeNumber from '../blocks/ChangeNumber';
+import VerifyOTP from '../blocks/VerifyOTP';
 
 
 const Stack = createNativeStackNavigator();
 const HomeStack = createNativeStackNavigator();
+const ProfileStack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 export default function StackNavigation() {
@@ -60,8 +65,24 @@ export default function StackNavigation() {
         <HomeStack.Screen name="OrderSummary" component={OrderSummary} options={{headerShown:false}}/>
         <HomeStack.Screen name="Schedule" component={Schedule} options={{headerShown:false}}/>
         <HomeStack.Screen name="OrderConfirm" component={OrderConfirm} options={{headerShown:false}}/>
+        <HomeStack.Screen name="EditProfile" component={EditProfile} options={{headerShown:false}}/>
         
       </HomeStack.Navigator>
+    
+  );
+}
+ const ProfileStackNavigation=()=> {
+  return (
+    
+      <ProfileStack.Navigator>
+        
+        <ProfileStack.Screen name="ProfileScreen" component={Profile} options={{headerShown:false}}/>
+        <ProfileStack.Screen name="EditProfile" component={EditProfile} options={{headerShown:false}}/>
+        <ProfileStack.Screen name="ChangePassword" component={ChangePassword} options={{headerShown:false}}/>
+        <ProfileStack.Screen name="ChangeNumber" component={ChangeNumber} options={{headerShown:false}}/>
+        <ProfileStack.Screen name="VerifyOTP" component={VerifyOTP} options={{headerShown:false}}/>
+        
+      </ProfileStack.Navigator>
     
   );
 }
@@ -100,9 +121,10 @@ function BottomTab() {
       />
       <Tab.Screen
         name="Profile"
-        component={Profile}
+        component={ProfileStackNavigation}
         options={{
           headerShown: false,
+          
           tabBarIcon: ({focused}) => (
             <Entypo
               name="user"

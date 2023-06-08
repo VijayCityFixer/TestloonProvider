@@ -3,8 +3,8 @@ import React, { Component } from "react";
 import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 import { logo } from "../assets/assets";
 import { Title } from "../common/texts";
-import { White } from "../common/colors";
-
+import { KellyGreen, White } from "../common/colors";
+import { MyStatusBar } from '../common/Statusbar'
 export default class SplashScreen extends Component {
   constructor(props) {
     super(props);
@@ -18,6 +18,7 @@ export default class SplashScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
+                <MyStatusBar backgroundColor={KellyGreen} barStyle="light-content" />
         <Image style={styles.logoImg} source={logo} />
         <Text style={styles.titleText}>{Title}</Text>
       </View>
